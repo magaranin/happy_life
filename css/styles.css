@@ -8,12 +8,6 @@ li, a, button {
     text-decoration: none;
 }
 
-body {
-    padding: 30px;
-    background: url('../background_photo.jpg') no-repeat;
-    background-size: 100%;
-}
-
 div {
     align-content: center;
     text-decoration-style: wavy;
