@@ -9,11 +9,10 @@ li, a, button {
 }
 
 body {
-    padding: 30px 10%;
+    padding: 30px;
     background: url('../background_photo.jpg') no-repeat;
     background-size: 100%;
 }
-
 
 div {
     align-content: center;
@@ -76,12 +75,12 @@ div {
 
 }
 .nav li:hover ol a,
-.nav li:hover ul a 
+.nav li:hover ul a {
     text-decoration: none;
 }
 
 .nav li:hover ol li a:hover,
-.nav li:hover ul li a:hover 
+.nav li:hover ul li a:hover {
     background-color: black;
 }
 .nav li {
@@ -98,13 +97,12 @@ div {
 div.gallery {
     margin: 5px;
     float: left;
-    width: 750px;
+    width: 700px;
     background: none;
-  }
-  
-  div.gallery img {
+}
+
+div.gallery img {
     width: 100%;
     height: auto;
-  }
-  
-  
+}
+
