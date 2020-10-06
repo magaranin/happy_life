@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+    margin: 0px;
+    min-width: 360px;
+}
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     color: red;
     text-decoration: none;
 }
@@ -13,24 +19,35 @@ div {
     text-decoration-style: wavy;
 }
 
-.text {
-    background-color: #fff;
-}
-
 .nav {
     list-style: none;
     font-weight: bold;
-    margin-bottom: 10px;
-    float: left; /* Clear floats */
-    width: 100%;
-    position: relative;
-    z-index: 5;
+    margin: 0px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    display: block;
+    z-index: 9999; 
+    position: fixed;
+    background-color: white;
+    width: 100vw;
 }
-.nav li {
-    float: left;
+
+.nav > li {
+    display: inline-block;
     margin-right: 10px;
-    position: relative;
 }
+
+li {
+    position: relative;   
+}
+
+.sub_cat li a {
+    background-color: rgb(175, 236, 252);
+    border: 2px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    color: black;
+}
+
 .nav a {
     display: block;
     padding: 5px;
@@ -38,65 +55,120 @@ div {
     background-color: black;
     text-decoration: none;
 }
-.nav a:hover {
+.nav a:hover,
+.nav .current {
     color: #fff;
-    background-color: blue;
+    background-color: rgb(255, 174, 212);
 }
 
 /*--- DROPDOWN ---*/
-.nav ol,
+
 .nav ul {
     list-style: none;
     position: absolute;
     left: -9999px; /* Hide off-screen when not needed (this is more accessible than display: none;) */
 }
-.nav ul li, 
-.nav ol li 
-{
+.nav ul li {
     padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
     float: none;
 }
-.nav ul a,
-.nav ol a {
+
+.nav ul a {
         white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
 }
-.nav li:hover ol,
+
 .nav li:hover ul { /* Display the dropdown on hover */
     left: -40px; /* Bring back on-screen when needed */
 }
-.nav li:hover a { 
-    background-color:blue;
 
-}
-.nav li:hover ol a,
 .nav li:hover ul a {
     text-decoration: none;
 }
 
-.nav li:hover ol li a:hover,
 .nav li:hover ul li a:hover {
-    background-color: black;
+    background-color: rgb(255, 174, 212);
 }
+
 .nav li {
     white-space: nowrap;
 }
 
-.text p {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    box-sizing: border-box;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    box-sizing: border-box;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+body.home {
+    overflow: hidden;
+}
+div.header {
+    padding-top: 50px;
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 30%;
+}
+
+div.header {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.text {
+    margin-top: 10px;
+    padding: 0px 80px;
+    text-align: center;
+    align-content: center;
+}
+
+.title,
+.message {
+    color: red;
+    display: inline-block;
+}
+
+.message {
+  box-sizing: border-box;
+    margin-bottom: 10px;
     color: black;
     position: relative;
     font-size: 24px;
     border: 2px red solid;
-}
-
-div.gallery {
-    margin: 5px;
-    float: left;
-    width: 700px;
-    background: none;
-}
-
-div.gallery img {
+    border-radius: 12px;
     width: 100%;
-    height: auto;
 }
 
+h1 {
+    margin: 0px;
+    border-radius: 6px;
+}
+
+h1.title,
+span.message {
+    z-index: 999;
+    background-color: rgb(227, 247, 253);
+    padding: 5px;
+}

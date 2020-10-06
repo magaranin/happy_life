@@ -1,8 +1,6 @@
 # happy_life
 
-Alin & Margarita's Wedding Galler
-
-First Project at Epicoduse 06.17.2020
+Alin & Margarita's Wedding Gallery
 
 By Margarita Sirbu
 
@@ -18,6 +16,5 @@ Github
 Link to GitHub page
 https://github.com/magaranin/happy_life.git
 
-Legal
 Copyright (c) 2020 Margarita Sirbu
-This softare is licensed under the MIT license.
+This software is licensed under the MIT license.
