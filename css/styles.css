@@ -161,6 +161,15 @@ div.header {
     width: 100%;
 }
 
+.section {
+    display: block;
+    padding-bottom: 10px;                    
+}
+
+.last.section {
+    padding-bottom: 0px;
+}
+
 h1 {
     margin: 0px;
     border-radius: 6px;
