@@ -5,6 +5,10 @@ body {
     margin: 0px;
     min-width: 360px;
 }
+.material {
+    font-family: "Material Icons", sans-serif;                  
+    font-size: 48px;
+}
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -55,6 +59,7 @@ li {
     background-color: black;
     text-decoration: none;
 }
+
 .nav a:hover,
 .nav .current {
     color: #fff;
@@ -68,6 +73,7 @@ li {
     position: absolute;
     left: -9999px; /* Hide off-screen when not needed (this is more accessible than display: none;) */
 }
+
 .nav ul li {
     padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
     float: none;
@@ -211,11 +217,13 @@ span.message {
     margin: 5px 0px;
     width: 100%;
     position: relative;
-  }
+}
+
 .am-spacer .mask {
     overflow: hidden;
     height: 20px;
-  }
+}
+
 .am-spacer .mask:after {
     content: '';
     display: block;
@@ -224,7 +232,8 @@ span.message {
     height: 25px;
     border-radius: 125px / 12px;
     box-shadow: 0 0 8px black;
-  }
+}
+
 .am-spacer span {
     width: 80px;
     height: 80px;
@@ -236,7 +245,8 @@ span.message {
     border-radius: 100%;
     box-shadow: 0 8px 16px #999;
     background: white;
-  }
+}
+
 .am-spacer span i {
     position: absolute;
     top: 4px;
@@ -250,7 +260,7 @@ span.message {
     font-style: normal;
     font-size: 20px;
     color: #999;
-  }
+}
 
 @media screen and (max-width: 620px) {
     .column {
@@ -304,7 +314,7 @@ span.message {
 }
 
 @media (orientation: landscape) {
-  .ribbon {
+    .ribbon {
     display: none;
   }
 }
@@ -314,4 +324,116 @@ span.message {
         display:block;
         height:100%;
     }
+}
+
+.loaderContainer {
+    margin: auto;
+  }
+  
+.loader {
+    margin: auto;
+    border: 16px solid #fdc9f0;
+    border-radius: 50%;
+    border-top: 16px solid rgb(37, 186, 255);
+    border-bottom: 16px solid rgb(37, 186, 255);
+    width: 64px;
+    height: 64px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+img.photo {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+img.photo:hover {
+    opacity: 0.9;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 95vh;
+    max-width:100%;
+}
+
+.modal-content {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.imgContainer {
+    display: flex;
+    margin: auto;
+    height: 100vh;
+}
+
+.imgContainer a {
+    margin: auto;
+    display: inline-block;
+}
+
+.download {
+    position: absolute;
+    top: 75px;
+    right: 5px;
+    border: 3px solid white;
+    color: white;
+    display: inline-block;
+    z-index: 99999;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }

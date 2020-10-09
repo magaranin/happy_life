@@ -10,6 +10,7 @@ This is a small website that includes pictures and information from Alin and Mar
 Technologies Used
 HTML 
 CSS
+JavaScript
 Git
 Github
 
